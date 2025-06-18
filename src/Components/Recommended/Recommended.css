@@ -10,7 +10,8 @@
 
 .side-video-list img {
     flex-basis: 49%;
-    width: 50%;
+    width: 40%;
+    border-radius: 10px;
 }
 
 .vid-info {
@@ -24,9 +25,16 @@
 .vid-info h4 {
     font-size: 13px;
     margin-bottom: 5px;
+    color: #000;
 }
 
 .vid-info p,
 .vid-info strong {
     font-size: 13px;
+}
+
+@media screen and (max-width: 900px){
+    .recommended {
+        flex-basis: 100%;
+    }
 }

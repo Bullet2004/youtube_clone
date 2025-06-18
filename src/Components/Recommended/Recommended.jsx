@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Recommended.css'
 import { API_KEY, value_converter } from '../../data'
 import { data, Link } from 'react-router-dom'
+import moment from 'moment'
 
 const Recommended = ({categoryId}) => {
 
@@ -25,8 +26,8 @@ const Recommended = ({categoryId}) => {
                 <img src={item.snippet.thumbnails.medium.url} alt="" />
                 <div className="vid-info">
                     <h4>{item.snippet.title}</h4>
-                    <strong>{item.snippet.channelTitle}</strong>
-                    <p>{value_converter(item.statistics.viewCount)} Views</p>
+                    <p>{item.snippet.channelTitle}</p>
+                    <p>{value_converter(item.statistics.viewCount)} Views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
                 </div>
             </Link>
             )
