@@ -15,9 +15,18 @@
 
 .vid-info {
     flex-basis: 49%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .vid-info h4 {
     font-size: 13px;
     margin-bottom: 5px;
+}
+
+.vid-info p,
+.vid-info strong {
+    font-size: 13px;
 }
